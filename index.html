@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <script type="text/javascript" src="js/main.js"></script>
     </head>
-    <body>
+    <body onload="load()">
 
         <!--Uma das formas de usar JavaScrip no cod HTML usando a função script tudo dentro dela vai se Java...-->
         <!--<script>
@@ -13,5 +13,20 @@
         </script>-->
 
         <h1> Minha Página</h1>
+
+        <!--O comando "onclick" esta puchando o "alert" criado na main.js-->
+        <button type="button" onclick="botao()">Clique aqui</button>
+        <h3 id="agradecimanto" onclick="redirecionar()"></h3>
+        <!--Se o mauser for passado encimada da palavra "Passe o mouse aqui" sera executada um ação
+        nesse caso sera um alerta na "main.js" ao add i this no "onmouseover" e "onmouseout" passamos
+        eles como o proprio parametro-->
+        <p id="mousemove" onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p>
+        <p id="mousemove2" onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p>
+
+        <select onchange="funcaoChange(this)">
+            <option value="1">Valor 1</option>
+            <option value="2">Valor 2</option>
+            <option value="3">Valor 3</option>
+        </select>
     </body>
 </html>
